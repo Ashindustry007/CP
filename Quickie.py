@@ -6,4 +6,5 @@ result = map(lambda x, y: x + y, numbers1, numbers2)
 test = list(map(list, l))
 l = list(map(int,input().split()))
 
-
+#ord() changes character to ascii and chr() changes the the integer input to their respective ascii char.
+print(chr(ord('a')+25)) #output - z
