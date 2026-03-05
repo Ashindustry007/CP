@@ -15,3 +15,17 @@ class Solution:
         return False
 
 #This was supposed to be solved using a slow pointer (head.next) and fast pointer (head.next.next) but I solved it in a diff manner.
+
+#below is the suggested solution
+class Solution(object):
+    def hasCycle(self, head):
+        slow = head
+        fast = head
+
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True  # Cycle detected
+
+        return False  # No cycle
